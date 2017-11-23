@@ -20,7 +20,7 @@ int main ()
 			}
 		}
 	}
-	for(x=size-1;x>=0;x--)
+	for(x=0;x<size;x++)
 	{
 		printf("%c",string[x]);
 	}
