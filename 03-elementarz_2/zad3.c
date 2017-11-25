@@ -1,3 +1,4 @@
+//Oblicz wartość π (pi) z nieskończonej sumy
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
