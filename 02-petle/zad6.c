@@ -1,3 +1,4 @@
+//wypisuje największą i najmniejszą liczbę umieszczoną w tablicy
 #include <stdio.h>
 
 int main ()
@@ -6,6 +7,7 @@ int main ()
 	int max=0;
 	int min=0;
 	int n[6];
+	
 	for(i=0;i<6;i++)
 	{
 		scanf ("%d", &n[i]);
@@ -15,6 +17,7 @@ int main ()
 		if(n[x]>max)
 			max=n[x];
 	}
+	
 	min=max;
 	for(x=0;x<6;x++)
 	{
