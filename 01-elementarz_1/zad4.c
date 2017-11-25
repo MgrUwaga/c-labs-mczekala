@@ -1,3 +1,4 @@
+//Napisać program obliczający silnię z podanej liczby
 #include <stdio.h>
 
 int main() 
