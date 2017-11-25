@@ -1,9 +1,11 @@
+//ze stdin 6 liczb całkowitych do tablicy, wypisze zawartość tej tablicy
 #include <stdio.h>
 
 int main ()
 { 
 	int i,x;
 	int n[6];
+	
 	for(i=0;i<6;i++)
 	{
 		scanf ("%d", &n[i]);
