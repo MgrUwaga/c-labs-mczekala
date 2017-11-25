@@ -1,3 +1,4 @@
+//wypiszuje liczbę liczb dodatnich w tablicy
 #include <stdio.h>
 
 int main ()
