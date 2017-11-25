@@ -1,4 +1,6 @@
+//sprawdza czy podana liczba całkowita jest pierwsza.
 #include <stdio.h>
+
 int main()
 {
   int n,jest_pierwsza,dzielnik;
@@ -8,6 +10,7 @@ int main()
 
   printf("Podaj liczbe calkowita: ");
   scanf("%d",&n);
+  
   while(dzielnik<n)
   {
     if((n%dzielnik)==0)
@@ -17,10 +20,12 @@ int main()
     }
     dzielnik++;
   }
+  
   if(n<1)
   {
     jest_pierwsza=0;
   }
+  
   printf("Podana liczba '%d' jest %s\n", n, jest_pierwsza ? "pierwsza" : "złożona");
   return 0;
 }
