@@ -1,10 +1,13 @@
+//liczby całkowite pomiędzy a i b.
 #include <stdio.h>
 
 int main ()
 { 
 	int x,z,a,b;
+	
 	scanf ("%d", &a);
 	scanf ("%d", &b);
+	
 	if(a<b)
 	{
 		a++;
