@@ -1,3 +1,4 @@
+//W miejsce kropek „...” wpisz kod, tak aby powstały działające programy.
 #include <stdio.h>
 
 int main() 
