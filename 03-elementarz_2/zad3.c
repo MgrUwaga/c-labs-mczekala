@@ -3,7 +3,7 @@
 #include <math.h>
 #include <string.h>
 
-void obliczPi(int end)
+double obliczSume(int end)
 {
 	double pi=0;
 	double i;
@@ -11,13 +11,27 @@ void obliczPi(int end)
 	{
 		pi=pi+(4/i)-(4/(i+2));
 	}
-	printf("%lf\n",pi);
+	return pi;
+}
+
+int obliczPi (double pi)
+{
+	int i;
+	while (obliczSume(i)<pi)
+	{
+		i++;
+	}
+	return i;
 }
 
 int main ()
 {
-	obliczPi(10);
-	obliczPi(100);
-	obliczPi(1000);
-	obliczPi(1000000);
+	printf("%lf\n",obliczSume(10));
+	printf("%lf\n",obliczSume(100));
+	printf("%lf\n",obliczSume(1000));
+	printf("%lf\n\n",obliczSume(1000000));
+
+	printf("%d\n",obliczPi(3.14));
+	printf("%d\n",obliczPi(3.141));
+	printf("%d\n",obliczPi(3.1415));
 }
