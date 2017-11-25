@@ -1,3 +1,4 @@
+//program rozmieszczający poniższe wzory oddzielnie jeden pod drugim
 #include <stdio.h>
 
 int main ()
