@@ -1,3 +1,4 @@
+//zad2, ale zamiast pętli „for” należy użyć pętli „while”.
 #include <stdio.h>
 
 int main() 
