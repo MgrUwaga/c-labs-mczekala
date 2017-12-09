@@ -1,47 +1,57 @@
 #include <stdio.h>
 #include <string.h>
 
-// wypisz_zaszyfrowany_tekst(string) {
-// }
+int wczytajTekst(char* s)
+{
+   while (1)
+   {
+        s = fgets (s, 255, stdin);
+        if (strlen(s)==1)
+            break;
+        printf("%s\n",s);
+   }
+   return 0;
+}
 
-int main() {
-	char string[255];
-	int i,z;
-	char alphabet[] = "abcdefghijklmnopqrstuvwxyzab";
+int zaszyfrujZnak(char *s)
+{
+  char alphabet[] = "abcdefghijklmnopqrstuvwxyzab";
 	char alphabetU[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZAB";
-	char sign;
-	int size = 0;
-  // char text[255];
-
-	// scanf("%s", text);
-	// printf("[%s]", text);
-	// strlen(text) => 11
-
-  // wczytaj_tekst(gdzie)
-	//		gdzie = fgets(gdzie, 255, stdin)
-	//    gdzie == NULL -> zakończ działanie exit(1)
-	//    gdzie != NULL -> wczytano poprawnie tekst do zaszyfrowania
-
-  // zaszyfruj(co)
-
-	for (i = 0; i < 11; i++) {
-		scanf("%c", &sign);
-		for(z=0;z<26;z++) {
-			if(sign == alphabet[z]) {
-				string[size] = alphabetU[z+2];
-				size++;
-				break;
-			}
+  int z;
+	for(z=0;z<26;z++)
+  {
+		if(s[z] == alphabet[z])
+    {
+			s[z] = alphabetU[z+2];
+			break;
 		}
 	}
+  return 0;
+}
+int zaszyfrujLinie(char*s)
+{
+  int i;
+  for(i=0;i<strlen(s);i++)
+  {
+    s[i]=zaszyfrujZnak(s[i]);
+  }
+  return 0;
+}
 
-	// wypisz_zaszyfrowany_tekst(co)
+// wypisz_zaszyfrowany_tekst(string)
+// {
+// 	for(x = 0; x < size; x++)
+//   {
+// 		printf("%c", string[x]);
+// 	}
+// 	printf("\n");
+//   fputs(string, stdout);
+// }
 
-	// wypisz_zaszyfrowany_tekst(string);
-
-	// for(x = 0; x < size; x++) {
-	// 	printf("%c", string[x]);
-	// }
-	// printf("\n");
-	fputs(string, stdout);
+int main()
+{
+  char napis[255];
+  wczytajTekst(napis);
+  zaszyfrujLinie(napis);
+  printf("%s\n", napis);
 }
