@@ -1,56 +1,53 @@
 #include <stdio.h>
 #include <string.h>
 
-int wczytajLinie(char* s)
+int readLine(char* s)
 {
-        s = fgets (s, 255, stdin);
-   return 0;
+  s = fgets (s, 255, stdin);
+  return 0;
 }
-
-char zaszyfrujZnak(char sign)
+char encodeCharacter(char sign)
 {
   char alphabet[] = "abcdefghijklmnopqrstuvwxyzab";
   char alphabetU[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZAB";
   int z;
-	for(z=0;z<26;z++)
+  for(z=0;z<26;z++)
+  {
+    if(sign == alphabet[z])
     {
-		if(sign == alphabet[z])
-        {
-			sign = alphabetU[z+2];
-			break;
-		}
+	  sign = alphabetU[z+2];
+	  break;
 	}
+  }
   return sign;
 }
-int zaszyfrujLinie(char*s)
+int encodeLine(char*s)
 {
   int i;
   for(i=0;i<strlen(s);i++)
   {
-    s[i]=zaszyfrujZnak(s[i]);
+    s[i]=encodeCharacter(s[i]);
   }
   return 0;
 }
-
-// wypisz_zaszyfrowany_tekst(string)
-// {
-// 	for(x = 0; x < size; x++)
-//   {
-// 		printf("%c", string[x]);
-// 	}
-// 	printf("\n");
-//   fputs(string, stdout);
-// }
-
+int writeEncodedAll(char**s,int i)
+{
+  int x;
+  for(x = 0; x < i; x++)
+  {
+    printf("answer %s\n", &s[x]);
+  }
+}
 int main()
 {
-  char napis[255];
-//  char* answer [255];
+  char* line[255];
   int i;
-    wczytajLinie(napis);
-    zaszyfrujLinie(napis);
-//    answer [0]=napis;
-    printf("%s\n",napis); 
-    
-//  printf("answer %s\n", answer[0]); 
+  for(i=0;i<255;i++)
+  {
+    readLine((char*)&line[i]);
+	encodeLine((char*)&line[i]);
+	if((strlen((char*)&line[i])<2))
+	  break;
+  }
+  writeEncodedAll((char**)&line,i);
 }
