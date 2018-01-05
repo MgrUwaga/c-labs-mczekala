@@ -2,9 +2,11 @@
 
 #include <stdio.h>
 
-void printRectangle(int height,int width)
+void printRectangle()
 {
-  int h,w;
+  int h,w,height,width;
+  puts("Podaj rozmiar prostokata");
+  scanf("%d %d",&height,&width);
   for(h=1;h<=height;h++)
   {
     for(w=1;w<=width;w++)
@@ -18,11 +20,16 @@ void printRectangle(int height,int width)
     }
     printf("\n");
   }
+  printf("\n");
 }
 
-void printOval(int size)
+void printOval()
 {
-  int h,s,w,h2,w2;
+  int size,h,s,w,h2,w2;
+
+  puts("Podaj rozmiar owalu");
+  scanf("%d",&size);
+
   for(h=1;h<=size/2;h++)//wiersz
   {
     s=(size/2)-h;
@@ -48,11 +55,16 @@ void printOval(int size)
     }
     printf("\n");
   }
+  printf("\n");
 }
 
-void printArrow(int size)
+void printArrow()
 {
-  int h,s,w,h1,w1;
+  int h,s,w,h1,w1,size;
+
+  puts("Podaj rozmiar strzaly");
+  scanf("%d",&size);
+
   for(h=1;h<=size/2;h++)//wiersz
   {
     s=(size/2)-h;
@@ -78,11 +90,14 @@ void printArrow(int size)
     }
     printf("\n");
   }
+  printf("\n");
 }
 
-void printDiamond(int size)
+void printDiamond()
 {
-  int h,s,w,h2,w2;
+  int h,s,w,h2,w2,size;
+  puts("Podaj rozmiar diamentu");
+  scanf("%d",&size);
   for(h=0;h<=size/2;h++)//wiersz
   {
     s=(size/2)-h;
@@ -108,10 +123,14 @@ void printDiamond(int size)
     }
     printf("\n");
   }
+  printf("\n");
 }
 
 int main()
 {
-  printDiamond(10);
+  printRectangle();
+  printOval();
+  printArrow();
+  printDiamond();
   return 0;
 }
