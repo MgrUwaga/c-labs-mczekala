@@ -6,12 +6,12 @@
 
 int testMultiply()
 {
-  int answer;
+  int answer, number1,number2,seed;
   time_t tt;
-  int seed = time(&tt);
+  seed = time(&tt);
   srand(seed);
-  int number1 = rand()%100;
-  int number2 = rand()%100;
+  number1 = rand()%100+1;
+  number2 = rand()%100+1;
   printf("oblicz %d * %d\n",number1,number2);
   scanf("%d",&answer);
   if((number1*number2) == answer)
