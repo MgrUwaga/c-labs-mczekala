@@ -1,4 +1,4 @@
-//
+//wartosc wsk+1 i wsk+3
 #include <stdio.h>
 
 int main ()
