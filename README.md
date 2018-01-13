@@ -1,9 +1,9 @@
 # Laboratorium C, 2017/18
 
-- [ ] Elementarz 1
+- [x] Elementarz 1
 - [ ] Petle
-- [ ] Elementarz 2
-- [ ] Funkcje
-- [ ] Wskazniki 1
+- [x] Elementarz 2
+- [x] Funkcje
+- [x] Wskazniki 1
 - [ ] Struktury
 - [ ] Rekurencja
