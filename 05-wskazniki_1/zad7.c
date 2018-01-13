@@ -30,7 +30,7 @@ void averageOfTheYear(int deszcz[LATA][MIESIACE])
 }
 void averageOfTheMonth(int deszcz[LATA][MIESIACE])
 {
-  double sum[4];
+  double sum[12];
   int i,x;
   for(i=0;i<12;i++)
   {
